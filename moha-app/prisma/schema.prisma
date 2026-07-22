@@ -1,0 +1,87 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model AdminUser {
+  id           String   @id @default(uuid())
+  username     String   @unique
+  passwordHash String
+  role         String   @default("admin")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model News {
+  id        String   @id @default(uuid())
+  title     String
+  slug      String   @unique
+  content   String
+  excerpt   String
+  imageUrl  String
+  category  String   @default("Update") // e.g., "Devlog", "News", "Announcement", "lore"
+  author    String   @default("Black Mirage Studio")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model GalleryItem {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  imageUrl    String
+  category    String   @default("screenshot") // e.g., "screenshot", "concept_art", "character", "temple", "walawwa"
+  isVideo     Boolean  @default(false)
+  videoUrl    String?
+  createdAt   DateTime @default(now())
+}
+
+model Trailer {
+  id          String   @id @default(uuid())
+  title       String
+  videoId     String   // e.g. "4t_3dhmuYHY" (Youtube ID)
+  description String?
+  category    String   @default("Trailer") // e.g., "Trailer", "Teaser", "Gameplay"
+  isFeatured  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
+
+model CommunityAnnouncement {
+  id        String   @id @default(uuid())
+  title     String
+  content   String
+  link      String
+  linkText  String   @default("Join Discussion")
+  platform  String   @default("discord") // e.g., "discord", "steam", "twitter"
+  createdAt DateTime @default(now())
+}
+
+model Subscriber {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+model AnalyticsEvent {
+  id        String   @id @default(uuid())
+  eventType String   // e.g., "wishlist_click", "steam_click", "trailer_view"
+  metadata  String?  // Custom description or details
+  createdAt DateTime @default(now())
+}
+
+model ContactInquiry {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

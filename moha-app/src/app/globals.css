@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --background: #050505;
+  --foreground: #EAEAEA;
+  --primary-red: #A30000;
+  --dark-red: #7A0000;
+  --charcoal: #0B0B0B;
+  --ash-gray: #A1A1A1;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', 'Manrope', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for Horror Mood */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a0000;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a0000;
+}
+
+/* Cinematic headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.1em;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Dynamic Film Grain overlay */
+.film-grain {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  background: transparent url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.06"/%3E%3C/svg%3E') repeat;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 49;
+  animation: grain-animation 8s steps(10) infinite;
+}
+
+@keyframes grain-animation {
+  0%, 100% { transform:translate(0, 0); }
+  10% { transform:translate(-5%, -10%); }
+  20% { transform:translate(-15%, 5%); }
+  30% { transform:translate(7%, -25%); }
+  40% { transform:translate(-5%, 25%); }
+  50% { transform:translate(-15%, 10%); }
+  60% { transform:translate(15%, 0%); }
+  70% { transform:translate(0%, 15%); }
+  80% { transform:translate(3%, 35%); }
+  95% { transform:translate(-10%, 10%); }
+}
+
+/* Screen Flicker Animation */
+.screen-flicker {
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.97; }
+  50% { opacity: 1.0; }
+  100% { opacity: 0.98; }
+}
+
+/* Red Pulse Animation */
+@keyframes redPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(163, 0, 0, 0.4), inset 0 0 10px rgba(163, 0, 0, 0.2);
+    border-color: rgba(163, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.8), inset 0 0 15px rgba(239, 68, 68, 0.4);
+    border-color: rgba(239, 68, 68, 0.9);
+  }
+}
+
+.red-pulse-hover:hover {
+  animation: redPulse 2s infinite ease-in-out;
+}
+
+/* VHS Glitch text effects */
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff0000;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -1px 0 #00ffff, 0 1px #00ffff;
+  clip: rect(85px, 450px, 140px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(31px, 9999px, 94px, 0); }
+  10% { clip: rect(112px, 9999px, 76px, 0); }
+  20% { clip: rect(85px, 9999px, 5px, 0); }
+  30% { clip: rect(27px, 9999px, 115px, 0); }
+  40% { clip: rect(73px, 9999px, 29px, 0); }
+  50% { clip: rect(118px, 9999px, 142px, 0); }
+  60% { clip: rect(8px, 9999px, 53px, 0); }
+  70% { clip: rect(135px, 9999px, 120px, 0); }
+  80% { clip: rect(62px, 9999px, 98px, 0); }
+  90% { clip: rect(15px, 9999px, 64px, 0); }
+  100% { clip: rect(94px, 9999px, 137px, 0); }
+}
+
+@keyframes glitch-anim2 {
+  0% { clip: rect(76px, 9999px, 116px, 0); }
+  11% { clip: rect(3px, 9999px, 95px, 0); }
+  22% { clip: rect(125px, 9999px, 13px, 0); }
+  33% { clip: rect(48px, 9999px, 63px, 0); }
+  44% { clip: rect(119px, 9999px, 111px, 0); }
+  55% { clip: rect(6px, 9999px, 147px, 0); }
+  66% { clip: rect(89px, 9999px, 41px, 0); }
+  77% { clip: rect(131px, 9999px, 122px, 0); }
+  88% { clip: rect(17px, 9999px, 83px, 0); }
+  100% { clip: rect(102px, 9999px, 150px, 0); }
+}
+
+/* Custom transitions and scroll animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scanline visual overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.12) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 48;
+}
+
+/* Masonry grid calculations fallback */
+.masonry-grid {
+  display: flex;
+  margin-left: -16px;
+  width: auto;
+}
+
+.masonry-grid_column {
+  padding-left: 16px;
+  background-clip: padding-box;
+}
+
+.masonry-grid_column > div {
+  margin-bottom: 16px;
+}
