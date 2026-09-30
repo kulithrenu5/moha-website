@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/navigation";
+import Link from "next/link";
 import { useAudio } from "@/context/AudioContext";
-import { Send, Sparkles, Flame, Youtube, MessageSquare } from "lucide-react";
+import { Send, Sparkles, Flame, Play, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const Footer: React.FC = () => {
@@ -140,7 +140,7 @@ export const Footer: React.FC = () => {
               onClick={playClickSound}
               className="text-neutral-500 hover:text-red-500 transition-colors"
             >
-              <Youtube className="w-5 h-5" />
+              <Play className="w-5 h-5" />
             </a>
             <a
               href="https://discord.gg"

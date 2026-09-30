@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/navigation";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAudio } from "@/context/AudioContext";
 import { Volume2, VolumeX, Flame, Menu, X } from "lucide-react";

@@ -11,6 +11,11 @@ export const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children 
   const pathname = usePathname();
   const isAdmin = pathname.startsWith("/admin");
 
+  // The Veronica tribute site ships its own chrome (age gate, header, footer).
+  if (pathname.startsWith("/veronica")) {
+    return <>{children}</>;
+  }
+
   if (isAdmin) {
     return (
       <div className="bg-[#0b0b0b] min-h-screen text-neutral-200 selection:bg-red-700 selection:text-white font-sans">
