@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- PLACEHOLDER favicon. Replace this file with the official Moha "M" mark
+       exported from Figma (keep the filename favicon.svg, 32x32 or square). -->
+  <rect x="0.5" y="0.5" width="31" height="31" fill="#050505" stroke="#c8a25a" stroke-opacity="0.45"/>
+  <path d="M9 24V8l7 9 7-9v16" fill="none" stroke="#c8a25a" stroke-width="1.6" stroke-linecap="square"/>
+</svg>

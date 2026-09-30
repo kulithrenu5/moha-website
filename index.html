@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moha | Sri Lankan Folklore Survival Horror</title>
+<meta name="description" content="Moha is a dark cinematic Sri Lankan horror experience - a first-person survival horror game of ancient folklore by Black Mirage Studio.">
+<meta name="theme-color" content="#050505">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Moha">
+<meta property="og:title" content="Moha | Sri Lankan Folklore Survival Horror">
+<meta property="og:description" content="Moha is a dark cinematic Sri Lankan horror experience - a first-person survival horror game of ancient folklore by Black Mirage Studio.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
+<link rel="stylesheet" href="assets/css/vendor-lenis.css">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="preload" href="assets/fonts/cinzel-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className = "js";</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="veil" aria-hidden="true"><span class="veil__mark">M</span></div>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!--
+    Moha ornamental sprite - original line-art drawn for this website.
+    Inspired by Kandyan / Sri Lankan temple ornament: lotus (nelum) rosettes,
+    liyawel creeper scrolls, moonstone (sandakada pahana) concentric bands,
+    torana niche arches and flame palmettes. Contains NO Sinhala script and
+    NO traced or copyrighted artwork.
+    Usage: <svg class="orn" aria-hidden="true"><use href="assets/svg/motifs.svg#motif-lotus"/></svg>
+  -->
+  <!-- Lotus rosette (nelum) - divider node / corner ornament -->
+  <symbol id="motif-lotus" viewBox="0 0 120 120">
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <path d="M 52.77 33.94 C 53.87 9.93, 60 8, 60 8 C 60 8, 66.13 9.93, 67.23 33.94"/>
+    <path d="M 73.32 36.47 C 91.07 20.27, 96.77 23.23, 96.77 23.23 C 96.77 23.23, 99.73 28.93, 83.53 46.68"/>
+    <path d="M 86.06 52.77 C 110.07 53.87, 112 60, 112 60 C 112 60, 110.07 66.13, 86.06 67.23"/>
+    <path d="M 83.53 73.32 C 99.73 91.07, 96.77 96.77, 96.77 96.77 C 96.77 96.77, 91.07 99.73, 73.32 83.53"/>
+    <path d="M 67.23 86.06 C 66.13 110.07, 60 112, 60 112 C 60 112, 53.87 110.07, 52.77 86.06"/>
+    <path d="M 46.68 83.53 C 28.93 99.73, 23.23 96.77, 23.23 96.77 C 23.23 96.77, 20.27 91.07, 36.47 73.32"/>
+    <path d="M 33.94 67.23 C 9.93 66.13, 8 60, 8 60 C 8 60, 9.93 53.87, 33.94 52.77"/>
+    <path d="M 36.47 46.68 C 20.27 28.93, 23.23 23.23, 23.23 23.23 C 23.23 23.23, 28.93 20.27, 46.68 36.47"/>
+    <path d="M 62.38 44.06 C 68.39 31.12, 71.86 31.36, 71.86 31.36 C 71.86 31.36, 74.49 33.65, 69.59 47.04"/>
+    <path d="M 72.96 50.41 C 86.35 45.51, 88.64 48.14, 88.64 48.14 C 88.64 48.14, 88.88 51.61, 75.94 57.62"/>
+    <path d="M 75.94 62.38 C 88.88 68.39, 88.64 71.86, 88.64 71.86 C 88.64 71.86, 86.35 74.49, 72.96 69.59"/>
+    <path d="M 69.59 72.96 C 74.49 86.35, 71.86 88.64, 71.86 88.64 C 71.86 88.64, 68.39 88.88, 62.38 75.94"/>
+    <path d="M 57.62 75.94 C 51.61 88.88, 48.14 88.64, 48.14 88.64 C 48.14 88.64, 45.51 86.35, 50.41 72.96"/>
+    <path d="M 47.04 69.59 C 33.65 74.49, 31.36 71.86, 31.36 71.86 C 31.36 71.86, 31.12 68.39, 44.06 62.38"/>
+    <path d="M 44.06 57.62 C 31.12 51.61, 31.36 48.14, 31.36 48.14 C 31.36 48.14, 33.65 45.51, 47.04 50.41"/>
+    <path d="M 50.41 47.04 C 45.51 33.65, 48.14 31.36, 48.14 31.36 C 48.14 31.36, 51.61 31.12, 57.62 44.06"/>
+    <circle cx="60" cy="60" r="17"/>
+    <circle cx="60" cy="60" r="56.5" stroke-dasharray="0.5 4.2"/>
+  </g>
+  <circle cx="60" cy="60" r="6.5" fill="currentColor" stroke="none"/>
+  </symbol>
+  <!-- Moonstone (sandakada pahana) inspired semicircular divider -->
+  <symbol id="motif-moonstone" viewBox="0 0 400 134">
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <path d="M 86 124 A 114 114 0 0 1 314 124"/>
+    <path d="M 100 124 A 100 100 0 0 1 300 124"/>
+    <path stroke-dasharray="0.5 4" d="M 115 124 A 85 85 0 0 1 285 124"/>
+    <path d="M 130 124 A 70 70 0 0 1 270 124"/>
+    <g fill="currentColor" stroke="none"><circle cx="92.5" cy="124" r="1.4"/><circle cx="92.91" cy="114.63" r="1.4"/><circle cx="94.13" cy="105.33" r="1.4"/><circle cx="96.16" cy="96.18" r="1.4"/><circle cx="98.98" cy="87.23" r="1.4"/><circle cx="102.57" cy="78.57" r="1.4"/><circle cx="106.9" cy="70.25" r="1.4"/><circle cx="111.94" cy="62.34" r="1.4"/><circle cx="117.65" cy="54.9" r="1.4"/><circle cx="123.99" cy="47.99" r="1.4"/><circle cx="130.9" cy="41.65" r="1.4"/><circle cx="138.34" cy="35.94" r="1.4"/><circle cx="146.25" cy="30.9" r="1.4"/><circle cx="154.57" cy="26.57" r="1.4"/><circle cx="163.23" cy="22.98" r="1.4"/><circle cx="172.18" cy="20.16" r="1.4"/><circle cx="181.33" cy="18.13" r="1.4"/><circle cx="190.63" cy="16.91" r="1.4"/><circle cx="200" cy="16.5" r="1.4"/><circle cx="209.37" cy="16.91" r="1.4"/><circle cx="218.67" cy="18.13" r="1.4"/><circle cx="227.82" cy="20.16" r="1.4"/><circle cx="236.77" cy="22.98" r="1.4"/><circle cx="245.43" cy="26.57" r="1.4"/><circle cx="253.75" cy="30.9" r="1.4"/><circle cx="261.66" cy="35.94" r="1.4"/><circle cx="269.1" cy="41.65" r="1.4"/><circle cx="276.01" cy="47.99" r="1.4"/><circle cx="282.35" cy="54.9" r="1.4"/><circle cx="288.06" cy="62.34" r="1.4"/><circle cx="293.1" cy="70.25" r="1.4"/><circle cx="297.43" cy="78.57" r="1.4"/><circle cx="301.02" cy="87.23" r="1.4"/><circle cx="303.84" cy="96.18" r="1.4"/><circle cx="305.87" cy="105.33" r="1.4"/><circle cx="307.09" cy="114.63" r="1.4"/><circle cx="307.5" cy="124" r="1.4"/></g>
+    <path d="M 183.36 118.91 C 148.66 100.98, 149.77 95, 149.77 95 C 149.77 95, 154.4 91.05, 187.27 112.13"/>
+    <path d="M 188.13 111.27 C 167.05 78.4, 171 73.77, 171 73.77 C 171 73.77, 176.98 72.66, 194.91 107.36"/>
+    <path d="M 196.09 107.05 C 194.27 68.03, 200 66, 200 66 C 200 66, 205.73 68.03, 203.91 107.05"/>
+    <path d="M 205.09 107.36 C 223.02 72.66, 229 73.77, 229 73.77 C 229 73.77, 232.95 78.4, 211.87 111.27"/>
+    <path d="M 212.73 112.13 C 245.6 91.05, 250.23 95, 250.23 95 C 250.23 95, 251.34 100.98, 216.64 118.91"/>
+    <path d="M 185 124 A 15 15 0 0 1 215 124"/>
+    <path d="M 90.42 92.58 Q 86.9 73.17, 103.75 62.92"/>
+    <path d="M 103.75 62.92 Q 105.85 43.3, 124.91 38.22"/>
+    <path d="M 124.91 38.22 Q 132.46 20, 152.18 20.51"/>
+    <path d="M 152.18 20.51 Q 164.57 5.17, 183.35 11.22"/>
+    <path d="M 183.35 11.22 Q 199.57 0, 215.87 11.11"/>
+    <path d="M 215.87 11.11 Q 234.59 4.92, 247.09 20.18"/>
+    <path d="M 247.09 20.18 Q 266.81 19.54, 274.49 37.7"/>
+    <path d="M 274.49 37.7 Q 293.58 42.65, 295.82 62.25"/>
+    <path d="M 295.82 62.25 Q 312.75 72.38, 309.36 91.81"/>
+    <path d="M 78 124 L 322 124"/>
+  </g>
+  </symbol>
+  <!-- Liyawel creeper band - Kandyan vine scroll border -->
+  <symbol id="motif-liyawel" viewBox="0 0 504 52">
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <path d="M 0 26 C 13.44 10, 28.56 10, 42 26 C 55.44 42, 70.56 42, 84 26 C 97.44 42, 112.56 42, 126 26 C 139.44 10, 154.56 10, 168 26 C 181.44 10, 196.56 10, 210 26 C 223.44 42, 238.56 42, 252 26 C 265.44 42, 280.56 42, 294 26 C 307.44 10, 322.56 10, 336 26 C 349.44 10, 364.56 10, 378 26 C 391.44 42, 406.56 42, 420 26 C 433.44 42, 448.56 42, 462 26 C 475.44 10, 490.56 10, 504 26"/>
+    <path d="M 21 14 C 14.5 7, 17.1 -2, 21 -6 C 24.9 -2, 27.5 7, 21 14"/>
+    <path d="M 21 9 L 21 -3"/>
+    <path d="M 63 38 C 56.5 45, 59.1 54, 63 58 C 66.9 54, 69.5 45, 63 38"/>
+    <path d="M 63 43 L 63 55"/>
+    <path d="M 42 26.0 c 6 4, 4 11, -2 12 c -5 1, -6 -5, -2 -7"/>
+    <path d="M 105 38 C 98.5 45, 101.1 54, 105 58 C 108.9 54, 111.5 45, 105 38"/>
+    <path d="M 105 43 L 105 55"/>
+    <path d="M 147 14 C 140.5 7, 143.1 -2, 147 -6 C 150.9 -2, 153.5 7, 147 14"/>
+    <path d="M 147 9 L 147 -3"/>
+    <path d="M 126 26.0 c 6 -4, 4 -11, -2 -12 c -5 -1, -6 5, -2 7"/>
+    <path d="M 189 14 C 182.5 7, 185.1 -2, 189 -6 C 192.9 -2, 195.5 7, 189 14"/>
+    <path d="M 189 9 L 189 -3"/>
+    <path d="M 231 38 C 224.5 45, 227.1 54, 231 58 C 234.9 54, 237.5 45, 231 38"/>
+    <path d="M 231 43 L 231 55"/>
+    <path d="M 210 26.0 c 6 4, 4 11, -2 12 c -5 1, -6 -5, -2 -7"/>
+    <path d="M 273 38 C 266.5 45, 269.1 54, 273 58 C 276.9 54, 279.5 45, 273 38"/>
+    <path d="M 273 43 L 273 55"/>
+    <path d="M 315 14 C 308.5 7, 311.1 -2, 315 -6 C 318.9 -2, 321.5 7, 315 14"/>
+    <path d="M 315 9 L 315 -3"/>
+    <path d="M 294 26.0 c 6 -4, 4 -11, -2 -12 c -5 -1, -6 5, -2 7"/>
+    <path d="M 357 14 C 350.5 7, 353.1 -2, 357 -6 C 360.9 -2, 363.5 7, 357 14"/>
+    <path d="M 357 9 L 357 -3"/>
+    <path d="M 399 38 C 392.5 45, 395.1 54, 399 58 C 402.9 54, 405.5 45, 399 38"/>
+    <path d="M 399 43 L 399 55"/>
+    <path d="M 378 26.0 c 6 4, 4 11, -2 12 c -5 1, -6 -5, -2 -7"/>
+    <path d="M 441 38 C 434.5 45, 437.1 54, 441 58 C 444.9 54, 447.5 45, 441 38"/>
+    <path d="M 441 43 L 441 55"/>
+    <path d="M 483 14 C 476.5 7, 479.1 -2, 483 -6 C 486.9 -2, 489.5 7, 483 14"/>
+    <path d="M 483 9 L 483 -3"/>
+    <path d="M 462 26.0 c 6 -4, 4 -11, -2 -12 c -5 -1, -6 5, -2 7"/>
+    <g fill="currentColor" stroke="none"><circle cx="0" cy="26.0" r="1.8"/><circle cx="84" cy="26.0" r="1.8"/><circle cx="168" cy="26.0" r="1.8"/><circle cx="252" cy="26.0" r="1.8"/><circle cx="336" cy="26.0" r="1.8"/><circle cx="420" cy="26.0" r="1.8"/><circle cx="504" cy="26.0" r="1.8"/></g>
+  </g>
+  </symbol>
+  <!-- Torana niche arch - frames the character artwork -->
+  <symbol id="motif-torana" viewBox="0 0 200 308">
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <path d="M 24 300 L 24 122 C 24 66, 60 28, 100 14 C 140 28, 176 66, 176 122 L 176 300"/>
+    <path d="M 36 300 L 36 124 C 36 74, 66 40, 100 27 C 134 40, 164 74, 164 124 L 164 300"/>
+    <path d="M 100 14 L 100 8"/>
+    <path d="M 100 2 C 94 6, 94 12, 100 14 C 106 12, 106 6, 100 2"/>
+    <path d="M 92 8 C 92 13, 96 16, 100 17 C 97 13, 95 10, 92 8"/>
+    <path d="M 108 8 C 108 13, 104 16, 100 17 C 103 13, 105 10, 108 8"/>
+    <path d="M 24 150 c 13 0, 19 9, 15 17 c -3 6, -11 6, -13 0 c -1.5 -4, 2 -8, 6 -7"/>
+    <path d="M 24 210 c 8 0, 12 6, 9 11"/>
+    <path d="M 176 150 c -13 0, -19 9, -15 17 c 3 6, 11 6, 13 0 c 1.5 -4, -2 -8, -6 -7"/>
+    <path d="M 176 210 c -8 0, -12 6, -9 11"/>
+    <path d="M 100 40 C 93 50, 93 60, 100 66 C 107 60, 107 50, 100 40"/>
+    <path d="M 89 48 C 89 58, 94 64, 100 66 C 95 58, 93 51, 89 48"/>
+    <path d="M 111 48 C 111 58, 106 64, 100 66 C 105 58, 107 51, 111 48"/>
+    <path d="M 24 300 L 38 300 M 24 292 L 32 292"/>
+    <path d="M 176 300 L 162 300 M 176 292 L 168 292"/>
+  </g>
+  </symbol>
+  <!-- Flame palmette - Kandyan flame motif accent -->
+  <symbol id="motif-palmette" viewBox="0 0 48 82">
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <path d="M 24 70 C 14 56, 14 34, 24 12 C 34 34, 34 56, 24 70"/>
+    <path d="M 24 70 C 20 56, 20 40, 24 26 C 28 40, 28 56, 24 70"/>
+    <path d="M 12 62 C 4 50, 5 34, 13 24 C 13 38, 15 50, 18 58"/>
+    <path d="M 36 62 C 44 50, 43 34, 35 24 C 35 38, 33 50, 30 58"/>
+    <path d="M 6 50 C 1 42, 2 32, 8 25"/>
+    <path d="M 42 50 C 47 42, 46 32, 40 25"/>
+    <circle cx="24" cy="73" r="2.4" fill="currentColor" stroke="none"/>
+  </g>
+  </symbol>
+  <!-- Kandyan geometric-floral band - thin rule ornament -->
+  <symbol id="motif-band" viewBox="0 0 416 32">
+  <g fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <path d="M 0 4 L 416 4"/>
+    <path d="M 0 28 L 416 28"/>
+    <path d="M 26 7 L 43 16 L 26 25 L 9 16 Z"/>
+    <path d="M 26 11.5 L 34.5 16 L 26 20.5 L 17.5 16 Z"/>
+    <path d="M 78 7 L 95 16 L 78 25 L 61 16 Z"/>
+    <path d="M 78 11.5 L 86.5 16 L 78 20.5 L 69.5 16 Z"/>
+    <path d="M 130 7 L 147 16 L 130 25 L 113 16 Z"/>
+    <path d="M 130 11.5 L 138.5 16 L 130 20.5 L 121.5 16 Z"/>
+    <path d="M 182 7 L 199 16 L 182 25 L 165 16 Z"/>
+    <path d="M 182 11.5 L 190.5 16 L 182 20.5 L 173.5 16 Z"/>
+    <path d="M 234 7 L 251 16 L 234 25 L 217 16 Z"/>
+    <path d="M 234 11.5 L 242.5 16 L 234 20.5 L 225.5 16 Z"/>
+    <path d="M 286 7 L 303 16 L 286 25 L 269 16 Z"/>
+    <path d="M 286 11.5 L 294.5 16 L 286 20.5 L 277.5 16 Z"/>
+    <path d="M 338 7 L 355 16 L 338 25 L 321 16 Z"/>
+    <path d="M 338 11.5 L 346.5 16 L 338 20.5 L 329.5 16 Z"/>
+    <path d="M 390 7 L 407 16 L 390 25 L 373 16 Z"/>
+    <path d="M 390 11.5 L 398.5 16 L 390 20.5 L 381.5 16 Z"/>
+    <g fill="currentColor" stroke="none"><circle cx="26" cy="16" r="1.5"/><circle cx="52" cy="16" r="1.1"/><circle cx="78" cy="16" r="1.5"/><circle cx="104" cy="16" r="1.1"/><circle cx="130" cy="16" r="1.5"/><circle cx="156" cy="16" r="1.1"/><circle cx="182" cy="16" r="1.5"/><circle cx="208" cy="16" r="1.1"/><circle cx="234" cy="16" r="1.5"/><circle cx="260" cy="16" r="1.1"/><circle cx="286" cy="16" r="1.5"/><circle cx="312" cy="16" r="1.1"/><circle cx="338" cy="16" r="1.5"/><circle cx="364" cy="16" r="1.1"/><circle cx="390" cy="16" r="1.5"/><circle cx="416" cy="16" r="1.1"/></g>
+  </g>
+  </symbol>
+  <!-- Corner vine - card / frame corner ornament -->
+  <symbol id="motif-corner" viewBox="0 0 84 84">
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <path d="M 3 3 L 78 3"/>
+    <path d="M 3 3 L 3 78"/>
+    <path d="M 3 3 C 30 6, 46 22, 49 49 C 50 60, 56 66, 66 67"/>
+    <path d="M 14 4 C 20 12, 28 17, 38 18"/>
+    <path d="M 4 14 C 12 20, 17 28, 18 38"/>
+    <path d="M 66 67 C 74 62, 80 64, 81 71 C 74 74, 68 72, 66 67"/>
+    <circle cx="9" cy="9" r="2.2" fill="currentColor" stroke="none"/>
+  </g>
+  </symbol>
+</svg>
+
+<div class="atmo" aria-hidden="true">
+  <div class="fog">
+    <div class="fog__layer fog__layer--a"></div>
+    <div class="fog__layer fog__layer--b"></div>
+    <div class="fog__layer fog__layer--c"></div>
+  </div>
+  <canvas class="atmo__dust"></canvas>
+  <div class="atmo__grain"></div>
+  <div class="atmo__vignette"></div>
+</div>
+
+<header class="nav" id="top">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html" aria-label="Moha - home">
+      <span class="brand__mark" aria-hidden="true">M</span>
+      <span class="brand__text">
+        <span class="brand__name">Moha</span>
+        <span class="brand__studio">Black Mirage Studio</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+          <a class="nav__link is-active" href="index.html" aria-current="page">Home</a>
+          <a class="nav__link" href="game.html">Game</a>
+          <a class="nav__link" href="characters.html">Characters</a>
+          <a class="nav__link" href="world.html">World</a>
+          <a class="nav__link" href="media.html">Media</a>
+    </nav>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <span class="burger__box" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<div class="mmenu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <nav class="mmenu__list" aria-label="Mobile">
+        <a class="mmenu__link is-active" href="index.html" aria-current="page"><i>01</i>Home</a>
+        <a class="mmenu__link" href="game.html"><i>02</i>Game</a>
+        <a class="mmenu__link" href="characters.html"><i>03</i>Characters</a>
+        <a class="mmenu__link" href="world.html"><i>04</i>World</a>
+        <a class="mmenu__link" href="media.html"><i>05</i>Media</a>
+  </nav>
+  <div class="mmenu__foot">
+    <span class="label">Moha &middot; Black Mirage Studio</span>
+    <div class="mmenu__social">
+      <a data-social="instagram" data-social-name="Instagram" href="#" aria-disabled="true" aria-label="Instagram"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="4.6"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none"/></svg><span class="rail__tip">Link pending</span></a>
+      <a data-social="youtube" data-social-name="YouTube" href="#" aria-disabled="true" aria-label="YouTube"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="19" height="12.6" rx="3.6"/><path d="M10.4 9.6l4.7 2.7-4.7 2.7z"/></svg><span class="rail__tip">Link pending</span></a>
+      <a data-social="tiktok" data-social-name="TikTok" href="#" aria-disabled="true" aria-label="TikTok"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.6 3.5v10.9a3.7 3.7 0 1 1-3.7-3.7"/><path d="M14.6 5.3c.7 2 2.4 3.4 4.6 3.6"/></svg><span class="rail__tip">Link pending</span></a>
+      <a data-social="discord" data-social-name="Discord" href="#" aria-disabled="true" aria-label="Discord"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6.3C7.4 6.7 6 7.4 4.9 8.3 3.6 10.9 3.1 13.6 3.4 16.3c1.5 1.1 3 1.8 4.6 2.1l1-1.7"/><path d="M15 6.3c1.6.4 3 1.1 4.1 2 1.3 2.6 1.8 5.3 1.5 8-1.5 1.1-3 1.8-4.6 2.1l-1-1.7"/><path d="M9 6.3c1-.2 2-.3 3-.3s2 .1 3 .3"/><path d="M8.7 16.4c1.1.3 2.2.4 3.3.4s2.2-.1 3.3-.4"/><circle cx="9.7" cy="12" r="1.2"/><circle cx="14.3" cy="12" r="1.2"/></svg><span class="rail__tip">Link pending</span></a>
+    </div>
+  </div>
+</div>
+
+<aside class="rail" aria-label="Official social channels">
+      <a data-social="instagram" data-social-name="Instagram" href="#" aria-disabled="true" aria-label="Instagram"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="4.6"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none"/></svg><span class="rail__tip">Link pending</span></a>
+      <a data-social="youtube" data-social-name="YouTube" href="#" aria-disabled="true" aria-label="YouTube"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="19" height="12.6" rx="3.6"/><path d="M10.4 9.6l4.7 2.7-4.7 2.7z"/></svg><span class="rail__tip">Link pending</span></a>
+      <a data-social="tiktok" data-social-name="TikTok" href="#" aria-disabled="true" aria-label="TikTok"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.6 3.5v10.9a3.7 3.7 0 1 1-3.7-3.7"/><path d="M14.6 5.3c.7 2 2.4 3.4 4.6 3.6"/></svg><span class="rail__tip">Link pending</span></a>
+      <a data-social="discord" data-social-name="Discord" href="#" aria-disabled="true" aria-label="Discord"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6.3C7.4 6.7 6 7.4 4.9 8.3 3.6 10.9 3.1 13.6 3.4 16.3c1.5 1.1 3 1.8 4.6 2.1l1-1.7"/><path d="M15 6.3c1.6.4 3 1.1 4.1 2 1.3 2.6 1.8 5.3 1.5 8-1.5 1.1-3 1.8-4.6 2.1l-1-1.7"/><path d="M9 6.3c1-.2 2-.3 3-.3s2 .1 3 .3"/><path d="M8.7 16.4c1.1.3 2.2.4 3.3.4s2.2-.1 3.3-.4"/><circle cx="9.7" cy="12" r="1.2"/><circle cx="14.3" cy="12" r="1.2"/></svg><span class="rail__tip">Link pending</span></a>
+</aside>
+<main id="main">
+
+<section class="hero" data-mascot-slot>
+  <div class="hero__bg" data-hero-bg></div>
+  <div class="hero__ornament" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-moonstone"></use></svg></div>
+  <div class="hero__inner">
+    <p class="hero__kicker" data-hero="kicker">Black Mirage Studio presents</p>
+    <h1 class="hero__title" aria-label="Moha"><span class="t-letter">M</span><span class="t-letter">o</span><span class="t-letter">h</span><span class="t-letter">a</span></h1>
+    <p class="hero__sub" data-hero="sub">A dark cinematic Sri Lankan horror experience.</p>
+    <p class="hero__tag" data-hero="tag">Sri Lankan Folklore Survival Horror</p>
+    <div class="hero__cta" data-hero="cta">
+      <a class="btn btn--primary" data-magnetic href="world.html">Enter the World <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--ghost" data-magnetic href="characters.html">Meet the Mahasona</a>
+      <a class="btn btn--ghost" data-magnetic href="media.html">View Media</a>
+    </div>
+  </div>
+  <div class="hero__scroll" data-hero="scroll" aria-hidden="true">
+    <span>Descend</span><span class="hero__scroll-line"></span>
+  </div>
+</section>
+
+<section class="section" id="folklore">
+  <div class="wrap">
+    <div class="head-block head-block--center">
+      <p class="eyebrow eyebrow--rule" data-reveal="up">The Ancient Curse Is Real</p>
+      <h2 class="title" data-reveal="up" data-delay="0.06">Sri Lankan Folklore</h2>
+      <p class="lede" data-reveal="up" data-delay="0.12">Five demons of local legend stand between the living
+         and the grave. Learn their nature before you walk into Meemure.</p>
+      <div data-reveal="up" data-delay="0.18"><svg class="orn rule-orn" aria-hidden="true" focusable="false"><use href="#motif-moonstone"></use></svg></div>
+    </div>
+    <div class="viewer" style="margin-top:clamp(40px,5vw,64px)">
+      <div class="viewer__list" role="tablist" aria-label="Demons of Sri Lankan folklore">
+          <button class="viewer__btn" type="button" role="tab" id="tab-mahasona" aria-controls="panel-mahasona" aria-selected="true" data-demon="mahasona">
+            <span><span class="viewer__btn-name">Mahasona</span><span class="viewer__btn-title">The King of Cemeteries</span></span>
+            <span class="viewer__btn-arrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></span>
+          </button>
+          <button class="viewer__btn" type="button" role="tab" id="tab-mohini" aria-controls="panel-mohini" aria-selected="false" data-demon="mohini">
+            <span><span class="viewer__btn-name">Mohini</span><span class="viewer__btn-title">The Ghostly Mother</span></span>
+            <span class="viewer__btn-arrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></span>
+          </button>
+          <button class="viewer__btn" type="button" role="tab" id="tab-kalukumaraya" aria-controls="panel-kalukumaraya" aria-selected="false" data-demon="kalukumaraya">
+            <span><span class="viewer__btn-name">Kalukumaraya</span><span class="viewer__btn-title">The Dark Prince</span></span>
+            <span class="viewer__btn-arrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></span>
+          </button>
+          <button class="viewer__btn" type="button" role="tab" id="tab-ririyaka" aria-controls="panel-ririyaka" aria-selected="false" data-demon="ririyaka">
+            <span><span class="viewer__btn-name">Ririyaka</span><span class="viewer__btn-title">The Blood Demon</span></span>
+            <span class="viewer__btn-arrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></span>
+          </button>
+          <button class="viewer__btn" type="button" role="tab" id="tab-kinduri" aria-controls="panel-kinduri" aria-selected="false" data-demon="kinduri">
+            <span><span class="viewer__btn-name">Kinduri</span><span class="viewer__btn-title">The Forest Siren</span></span>
+            <span class="viewer__btn-arrow"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></span>
+          </button>
+      </div>
+        <div class="viewer__panel" role="tabpanel" id="panel-mahasona" aria-labelledby="tab-mahasona">
+          <div class="viewer__media"><span class="plate plate--ar-4-5" ><span class="plate__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-lotus"></use></svg></span><img data-src="" alt="" loading="lazy" decoding="async"><span class="plate__tag">artwork pending &middot; assets/images/characters/mahasona.jpg</span></span></div>
+          <div class="viewer__body">
+            <p class="eyebrow">The King of Cemeteries</p>
+            <h3 class="viewer__name">Mahasona</h3>
+            <p class="viewer__desc">A colossal, 12-foot-tall demon with the head of a fierce bear (or lion) turned backward, riding a giant black boar. He was once Jayasena, a human giant of legendary strength, who was decapitated in a duel of honor. His friends panic-attached a bear's head to revive him. Shamed and filled with absolute hatred, he became the supreme stalker of the dead.</p>
+            <div class="viewer__mech">
+              <p class="label" style="margin-bottom:8px">Gameplay mechanics</p>
+              <p class="viewer__desc">Sound-based tracker. He cannot see, but has hyper-acute hearing. Running or stepping on twigs will immediately reveal your location. When he approaches, your flashlight will flicker and chromatic aberration will distort your screen.</p>
+            </div>
+            <blockquote class="viewer__quote">&ldquo;His paw slams onto the victim&rsquo;s back, leaving a cold blue bruise that rots the soul in hours.&rdquo;</blockquote>
+          </div>
+        </div>
+        <div class="viewer__panel" role="tabpanel" id="panel-mohini" aria-labelledby="tab-mohini" hidden>
+          <div class="viewer__media"><span class="plate plate--ar-4-5" ><span class="plate__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-lotus"></use></svg></span><img data-src="" alt="" loading="lazy" decoding="async"><span class="plate__tag">artwork pending &middot; assets/images/folklore/mohini.jpg</span></span></div>
+          <div class="viewer__body">
+            <p class="eyebrow">The Ghostly Mother</p>
+            <h3 class="viewer__name">Mohini</h3>
+            <p class="viewer__desc">Appears under the full moon as an ethereal, beautiful young woman dressed in white, cradling a baby on lonely forest roads. She asks travelers to hold her child for a moment while she ties her hair. Anyone who takes the baby falls under an instant curse, as the baby turns into a demonic doll and Mohini reveals her fanged, rotting visage.</p>
+            <div class="viewer__mech">
+              <p class="label" style="margin-bottom:8px">Gameplay mechanics</p>
+              <p class="viewer__desc">A siren-like illusion entity. She lures you with soft, echoing baby cries. If you approach, you must maintain eye contact and walk backward slowly. Turning your back or running triggers an instant throat-slitting charge.</p>
+            </div>
+            <blockquote class="viewer__quote">&ldquo;Can you hold my child, traveler? Just for a second&hellip;&rdquo;</blockquote>
+          </div>
+        </div>
+        <div class="viewer__panel" role="tabpanel" id="panel-kalukumaraya" aria-labelledby="tab-kalukumaraya" hidden>
+          <div class="viewer__media"><span class="plate plate--ar-4-5" ><span class="plate__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-lotus"></use></svg></span><img data-src="" alt="" loading="lazy" decoding="async"><span class="plate__tag">artwork pending &middot; assets/images/folklore/kalukumaraya.jpg</span></span></div>
+          <div class="viewer__body">
+            <p class="eyebrow">The Dark Prince</p>
+            <h3 class="viewer__name">Kalukumaraya</h3>
+            <p class="viewer__desc">A shadowy, seductive demon prince who haunts the dreams of young women and travelers sleeping in old manor houses (Walawwas). He manifests as a dark cloud or a handsome black-clad youth, inducing sleep paralysis, severe night sweats, and physical weakness, slowly draining the victim's life force.</p>
+            <div class="viewer__mech">
+              <p class="label" style="margin-bottom:8px">Gameplay mechanics</p>
+              <p class="viewer__desc">A dream-state predator. He spawns while you investigate the indoor bedrooms of the Walawwa. He attacks by raising the room temperature and inducing hallucinations. You must find hidden talisman mirrors to reflect his gaze and break the sleep paralysis.</p>
+            </div>
+            <blockquote class="viewer__quote">&ldquo;Do not fall asleep in the master bedroom. He is already waiting.&rdquo;</blockquote>
+          </div>
+        </div>
+        <div class="viewer__panel" role="tabpanel" id="panel-ririyaka" aria-labelledby="tab-ririyaka" hidden>
+          <div class="viewer__media"><span class="plate plate--ar-4-5" ><span class="plate__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-lotus"></use></svg></span><img data-src="" alt="" loading="lazy" decoding="async"><span class="plate__tag">artwork pending &middot; assets/images/folklore/ririyaka.jpg</span></span></div>
+          <div class="viewer__body">
+            <p class="eyebrow">The Blood Demon</p>
+            <h3 class="viewer__name">Ririyaka</h3>
+            <p class="viewer__desc">A small, manic, and highly hyperactive demon who is perpetually drenched in blood. He carries a small club and has skin covered in raw sores. Ririyaka is the physical manifestation of high fevers, hemorrhages, and pure animalistic bloodlust, dwelling near moonlit paddy fields and stagnant waters.</p>
+            <div class="viewer__mech">
+              <p class="label" style="margin-bottom:8px">Gameplay mechanics</p>
+              <p class="viewer__desc">A high-speed skirmisher. Ririyaka travels in packs. They attack from the tall paddy grasses, biting and inflicting a bleeding status effect. Wielding an ancient iron sickle or using salt-water Thovil powder are the only ways to repel them.</p>
+            </div>
+            <blockquote class="viewer__quote">&ldquo;He drinks the blood of cattle and men, leaving dry husks in the mud.&rdquo;</blockquote>
+          </div>
+        </div>
+        <div class="viewer__panel" role="tabpanel" id="panel-kinduri" aria-labelledby="tab-kinduri" hidden>
+          <div class="viewer__media"><span class="plate plate--ar-4-5" ><span class="plate__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-lotus"></use></svg></span><img data-src="" alt="" loading="lazy" decoding="async"><span class="plate__tag">artwork pending &middot; assets/images/folklore/kinduri.jpg</span></span></div>
+          <div class="viewer__body">
+            <p class="eyebrow">The Forest Siren</p>
+            <h3 class="viewer__name">Kinduri</h3>
+            <p class="viewer__desc">A tragic, weeping creature with the upper torso of a pregnant woman and the lower body of a majestic bird. In ancient folklore, she was a pregnant woman banished to the jungle who died in childbed. Now, her spirit haunts the deep valleys of Meemure, weeping mournfully and striking down anyone who dares to cross her nesting trees.</p>
+            <div class="viewer__mech">
+              <p class="label" style="margin-bottom:8px">Gameplay mechanics</p>
+              <p class="viewer__desc">An environmental sound obstacle. Her agonizing wails block out other sounds (including Mahasona's footsteps). You must burn incense to soothe her spirit and quiet her cries to safely navigate the sector.</p>
+            </div>
+            <blockquote class="viewer__quote">&ldquo;Her weeping mimics the wind, but it carries a mother&rsquo;s cold wrath.&rdquo;</blockquote>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" id="mechanics-preview">
+  <div class="wrap">
+    <div class="head-block head-block--center">
+      <p class="eyebrow eyebrow--rule" data-reveal="up">Unparalleled Immersion</p>
+      <h2 class="title" data-reveal="up" data-delay="0.06">Survival Horror Mechanics</h2>
+      <div data-reveal="up" data-delay="0.12"><svg class="orn rule-orn" aria-hidden="true" focusable="false"><use href="#motif-moonstone"></use></svg></div>
+    </div>
+    <div class="cards cards--4" style="margin-top:clamp(36px,4.5vw,58px)" data-reveal="stagger">
+        <article class="card">
+          <span class="card__num">01</span>
+          <span class="card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.6"/><path d="M15.4 8.6l-2.1 4.7-4.7 2.1 2.1-4.7z"/></svg></span>
+          <h3 class="card__title">First-Person Dread</h3>
+          <p class="card__body">Full physical presence controls. Inspect objects in 3D, solve complex machinery, and carefully manage resources like flashlight batteries and exorcism charms.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">02</span>
+          <span class="card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
+          <h3 class="card__title">UE5 Hyper-Realism</h3>
+          <p class="card__body">Lumen dynamic lighting and photogrammetry of actual ruins from Ritigala create a claustrophobic, suffocatingly dark setting where danger lurks in every shadow.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">03</span>
+          <span class="card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3c3 4 6 6 6 10a6 6 0 0 1-12 0c0-4 3-6 6-10z"/><path d="M12 20.6a3 3 0 0 1-3-3c0-2 1.5-3.1 3-5 1.5 1.9 3 3 3 5a3 3 0 0 1-3 3z"/></svg></span>
+          <h3 class="card__title">Thovil Exorcism Systems</h3>
+          <p class="card__body">Wield a mixture of dynamic weaponry and traditional folklore rituals: draw protective circles in the mud, chant ancient spells, and light holy clay lamps to survive.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">04</span>
+          <span class="card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg></span>
+          <h3 class="card__title">Psychological Sound</h3>
+          <p class="card__body">Spatial binaural audio captures every twig snap in the distance, heavy panting of the protagonist, and terrifying whispers that emerge directly behind your ears.</p>
+        </article>
+    </div>
+  </div>
+</section>
+
+<section class="teaser">
+  <div class="teaser__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-lotus"></use></svg></div>
+  <div class="wrap teaser__inner">
+    <div>
+      <p class="eyebrow eyebrow--blood" data-reveal="up">The King of Cemeteries</p>
+      <h2 class="teaser__title" data-reveal="up" data-delay="0.06">Mahasona</h2>
+      <p class="teaser__body" data-reveal="up" data-delay="0.12">The supreme hunter of Moha. His footsteps echo
+         like thunder, and he tracks purely via the sound of your movements and panic-induced breathing.</p>
+      <div data-reveal="up" data-delay="0.18" style="margin-top:28px">
+        <a class="btn btn--ghost" data-magnetic href="characters.html">Open the dossier <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div style="width:min(300px,38vw)" data-reveal="clip" data-parallax="4"><span class="plate plate--ar-3-4" ><span class="plate__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-torana"></use></svg></span><img data-src="" alt="" loading="lazy" decoding="async"><span class="plate__tag">artwork pending &middot; assets/images/characters/mahasona.jpg</span></span></div>
+  </div>
+</section>
+
+<section class="section section--tight" id="gallery-preview">
+  <div class="wrap">
+    <div class="head-block head-block--center">
+      <p class="eyebrow eyebrow--rule" data-reveal="up">Witness the Nightmare</p>
+      <h2 class="title" data-reveal="up" data-delay="0.06">Explore the Visual Art</h2>
+      <p class="lede" data-reveal="up" data-delay="0.12">Concepts of real locations, haunted dark forests and
+         close views of ancient rituals, gathered in the media archive.</p>
+      <div data-reveal="up" data-delay="0.18"><svg class="orn rule-orn" aria-hidden="true" focusable="false"><use href="#motif-moonstone"></use></svg></div>
+    </div>
+    <div class="ggrid" data-reveal="stagger">
+        <a class="gitem" href="media.html#gallery" data-cursor="view">
+          <span class="plate plate--ar-16-9" ><span class="plate__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-lotus"></use></svg></span><img data-src="" alt="" loading="lazy" decoding="async"><span class="plate__tag">artwork pending &middot; assets/images/gallery/ritigala-ruins.jpg</span></span>
+          <span class="gitem__veil"></span>
+          <span class="gitem__plus"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span>
+          <span class="gitem__meta"><span class="gitem__cat">Temple</span><span class="gitem__title" style="display:block">The Ancient Ruins of Ritigala</span></span>
+        </a>
+        <a class="gitem" href="media.html#gallery" data-cursor="view">
+          <span class="plate plate--ar-16-9" ><span class="plate__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-lotus"></use></svg></span><img data-src="" alt="" loading="lazy" decoding="async"><span class="plate__tag">artwork pending &middot; assets/images/gallery/walawwa-interior.jpg</span></span>
+          <span class="gitem__veil"></span>
+          <span class="gitem__plus"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span>
+          <span class="gitem__meta"><span class="gitem__cat">Walawwa</span><span class="gitem__title" style="display:block">Inside the Abandoned Walawwa</span></span>
+        </a>
+        <a class="gitem" href="media.html#gallery" data-cursor="view">
+          <span class="plate plate--ar-16-9" ><span class="plate__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-lotus"></use></svg></span><img data-src="" alt="" loading="lazy" decoding="async"><span class="plate__tag">artwork pending &middot; assets/images/gallery/mahasona-shadow.jpg</span></span>
+          <span class="gitem__veil"></span>
+          <span class="gitem__plus"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span>
+          <span class="gitem__meta"><span class="gitem__cat">Demons</span><span class="gitem__title" style="display:block">Mahasona's Shadow</span></span>
+        </a>
+    </div>
+    <div class="head-block head-block--center" style="margin-top:40px" data-reveal="up">
+      <a class="btn btn--ghost" data-magnetic href="media.html">Enter the archive <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__orn" aria-hidden="true"><svg class="orn" aria-hidden="true" focusable="false"><use href="#motif-moonstone"></use></svg></div>
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <a class="brand" href="index.html" aria-label="Moha - home">
+          <span class="brand__mark" aria-hidden="true">M</span>
+          <span class="brand__text">
+            <span class="brand__name">Moha</span>
+            <span class="brand__studio">Black Mirage Studio</span>
+          </span>
+        </a>
+        <p>Moha is a deeply psychological first-person survival horror game set in the
+           haunted forests of Meemure, Sri Lanka. Based on authentic mythology and legends.</p>
+        <div class="footer__studio-logo">
+          <span class="label">Developed by</span>
+          <span class="footer__studio-fallback"><span class="sq" aria-hidden="true">B</span><span>Black Mirage</span></span>
+        </div>
+      </div>
+      <nav aria-label="Footer - explore">
+        <h4>Explore</h4>
+        <div class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="game.html">Game</a>
+            <a href="characters.html">Characters</a>
+            <a href="world.html">World</a>
+            <a href="media.html">Media</a>
+        </div>
+      </nav>
+      <nav aria-label="Footer - the game">
+        <h4>The Game</h4>
+        <div class="footer__links">
+            <a href="game.html#mechanics">Gameplay mechanics</a>
+            <a href="world.html#locations">Key locations</a>
+            <a href="world.html#bestiary">Demons &amp; folklore</a>
+            <a href="characters.html#mahasona">Mahasona dossier</a>
+            <a href="media.html#gallery">Media archive</a>
+        </div>
+      </nav>
+      <div>
+        <h4>Follow</h4>
+        <div class="footer__social">
+          <a data-social="instagram" data-social-name="Instagram" href="#" aria-disabled="true" aria-label="Instagram"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="4.6"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none"/></svg></a>
+          <a data-social="youtube" data-social-name="YouTube" href="#" aria-disabled="true" aria-label="YouTube"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="19" height="12.6" rx="3.6"/><path d="M10.4 9.6l4.7 2.7-4.7 2.7z"/></svg></a>
+          <a data-social="tiktok" data-social-name="TikTok" href="#" aria-disabled="true" aria-label="TikTok"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.6 3.5v10.9a3.7 3.7 0 1 1-3.7-3.7"/><path d="M14.6 5.3c.7 2 2.4 3.4 4.6 3.6"/></svg></a>
+          <a data-social="discord" data-social-name="Discord" href="#" aria-disabled="true" aria-label="Discord"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6.3C7.4 6.7 6 7.4 4.9 8.3 3.6 10.9 3.1 13.6 3.4 16.3c1.5 1.1 3 1.8 4.6 2.1l1-1.7"/><path d="M15 6.3c1.6.4 3 1.1 4.1 2 1.3 2.6 1.8 5.3 1.5 8-1.5 1.1-3 1.8-4.6 2.1l-1-1.7"/><path d="M9 6.3c1-.2 2-.3 3-.3s2 .1 3 .3"/><path d="M8.7 16.4c1.1.3 2.2.4 3.3.4s2.2-.1 3.3-.4"/><circle cx="9.7" cy="12" r="1.2"/><circle cx="14.3" cy="12" r="1.2"/></svg></a>
+        </div>
+        <p class="footer__note" style="margin-top:18px">Official channels will be linked here
+           once live. No account is claimed until then.</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>&copy; <span data-year>2026</span> Moha &middot; a Black Mirage Studio project. All rights reserved.</span>
+      <span>Sri Lankan folklore survival horror</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/vendor/lenis.min.js"></script>
+<script src="assets/js/moha-cursor.js"></script>
+<script src="assets/js/moha-atmosphere.js"></script>
+<script src="assets/js/moha-motion.js"></script>
+<script src="assets/js/moha-ui.js"></script>
+</body>
+</html>
